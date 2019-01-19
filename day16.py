@@ -89,9 +89,6 @@ def eqri(a,b,c,registers):
 def eqir(a,b,c,registers):
     return int(a == registers[b])
 
-
-
-
 def parse(filepath):
     with open(filepath, 'r') as f:
         f.readlines()
