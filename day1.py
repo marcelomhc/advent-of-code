@@ -19,5 +19,4 @@ def total_fuel(fuel):
     return fuel
 
 if __name__ == "__main__":
-    freqs[0] = True
     fuel = module_fuel(sys.argv[1])
