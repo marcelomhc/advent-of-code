@@ -74,4 +74,4 @@ if __name__ == "__main__":
     initial = (0,0)
     panel[initial] = 'o'
     panel = fill_panel("input/day3.data", panel, initial)
-    intersections = find_intersections(panel, initial)
+    find_intersections(panel, initial)
