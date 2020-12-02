@@ -3,11 +3,7 @@ import re
 
 def parse_input(filepath):
     with open(filepath, "r") as f:
-        passwords = []
-        for line in f.readlines():
-            parsed = re.search('(\d+)-(\d+) (.): (.+)', line).groups()
-            passwords.append(parsed)
-    return passwords
+        return [re.search('(\d+)-(\d+) (.): (.+)', line).groups() for line in f.readlines()]
 
 
 def count_valid(passwords):
