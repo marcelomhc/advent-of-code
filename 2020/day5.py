@@ -6,25 +6,20 @@ def get_seats(filepath):
 
 def binary_str_to_int(binary_str):
     num = 0
-    for i in range(len(binary_str)):
-        num = num * 2
-        num = num + int(binary_str[i] in ['B', 'R'])
+    for char in binary_str:
+        num = num*2 + int(char in ['B', 'R'])
     return num
 
 
 def get_ids(seats):
     ids = []
     for row, col in seats:
-        row_n = binary_str_to_int(row)
-        col_n = binary_str_to_int(col)
-        ids.append(row_n * 8 + col_n)
+        ids.append(binary_str_to_int(row) * 8 + binary_str_to_int(col))
     return ids
 
 
 def part1(seats):
-    seats = sorted(seats, key=lambda x: x[0], reverse=True)
-    ids = get_ids(seats)
-    print(max(ids))
+    print(max(get_ids(seats)))
 
 
 def part2(seats):
