@@ -1,4 +1,4 @@
-def get_passport_data(filepath):
+def get_seats(filepath):
     with open(filepath, 'r') as f:
         seats = [(x[:-4], x[-4:-1]) for x in f.readlines()]
     return seats
@@ -36,6 +36,6 @@ def part2(seats):
 
 
 if __name__ == "__main__":
-    data = get_passport_data("input/day5.data")
+    data = get_seats("input/day5.data")
     part1(data)
     part2(data)
