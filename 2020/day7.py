@@ -10,7 +10,7 @@ def parse_rules(filepath):
             bags[bag] = []
             if inside == 'no other bags.':
                 continue
-            colors = [(int(c[0]), c[2:]) for c in re.split('\sbag[s]?[,|.]\s?', inside)[:-1]]
+            colors = [(int(c[0]), c[2:]) for c in re.split('\\sbag[s]?[,|.]\\s?', inside)[:-1]]
 
             bags[bag] += colors
             [contain.setdefault(color, []).append(bag) for _, color in colors]
